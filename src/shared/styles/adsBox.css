@@ -1,0 +1,80 @@
+.ad-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ef4444;
+  color: #fff;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.ads-box {
+  background: #fff;
+  border-radius: 16px !important;
+  overflow: hidden; /* اضافه شود */
+  padding: 20px;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f1f5f9;
+}
+
+.ads-box .title {
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.ads-box .title::after {
+  content: '';
+  display: block;
+  width: 55px;
+  height: 3px;
+  background: #ef4444;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.ads-box figure {
+  margin: 0 0 15px;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.ads-box figure:last-child {
+  margin-bottom: 0;
+}
+
+.ads-box img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  transition: all 0.4s ease;
+}
+
+.ads-box figure:hover img {
+  transform: scale(1.05);
+}
+
+.ads-box figure::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.05);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.ads-box figure {
+  position: relative;
+}
+
+.ads-box figure:hover::after {
+  opacity: 1;
+}

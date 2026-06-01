@@ -1,0 +1,338 @@
+.comment-form-box {
+    max-width: 700px;
+    margin: 20px auto 0;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    font-family: Vazirmatn, Tahoma, Arial, sans-serif;
+}
+
+.comment-form-title {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    border-right: 4px solid #10b981;
+    padding-right: 10px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.comment-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.comment-form-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+.comment-form-input,
+.comment-form-textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: all 0.2s ease;
+    padding: 12px 14px;
+}
+
+.comment-form-input {
+    height: 46px;
+}
+
+.comment-form-textarea {
+    resize: vertical;
+    min-height: 120px;
+    line-height: 1.8;
+}
+
+.comment-form-input:focus,
+.comment-form-textarea:focus {
+    background: #ffffff;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.12);
+}
+
+.comment-form-actions {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comment-form-button {
+    border: none;
+    border-radius: 10px;
+    background: #10b981;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    padding: 12px 22px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.comment-form-button:hover {
+    background: #059669;
+    transform: translateY(-1px);
+}
+
+.comment-form-button:active {
+    transform: translateY(0);
+}
+
+.comment-form-button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* .comments-box {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    font-family: Vazirmatn, Tahoma, Arial, sans-serif;
+} */
+
+.comments-box {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    direction: rtl;
+    font-family: Vazirmatn, Tahoma, Arial, sans-serif;
+}
+
+/* .comments-title {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    border-right: 4px solid #2563eb;
+    padding-right: 10px;
+} */
+
+.comments-title {
+    margin: 0 0 15px 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    border-right: 4px solid #2563eb;
+    padding-right: 10px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.comment-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    color: #374151;
+    line-height: 1.9;
+    transition: all 0.2s ease;
+}
+
+.comment-item:hover {
+    background: #eef4ff;
+    border-color: #c7d2fe;
+    transform: translateX(-2px);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    gap: 12px;
+}
+
+.comment-date {
+    font-size: 0.85rem;
+    color: #6b7280;
+    white-space: nowrap;
+}
+
+.comment-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.icon-btn {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    font-size: 0.95rem;
+}
+
+.edit-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.edit-btn:hover {
+    background: #dbeafe;
+}
+
+.delete-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+}
+
+.comment-body {
+    margin: 0;
+    color: #374151;
+    word-break: break-word;
+}
+
+.comments-list li {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    color: #374151;
+    line-height: 1.9;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.comments-list li::before {
+    content: "•";
+    color: #2563eb;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.comments-list li:hover {
+    background: #eef4ff;
+    border-color: #c7d2fe;
+    transform: translateX(-2px);
+}
+
+
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #f0f0f0 !important;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 80%;
+  max-width: 600px; /* حداکثر عرض مدال */
+  max-height: 80vh; /* حداکثر ارتفاع مدال */
+  overflow-y: auto; /* فعال کردن اسکرول در صورت نیاز */
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 1.5em;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  font-size: 2em;
+  cursor: pointer;
+  padding: 0 10px;
+  line-height: 1;
+  color: #aaa;
+}
+
+.close-button:hover {
+  color: #333;
+}
+
+.modal-body {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.modal-footer {
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  text-align: right;
+}
+
+.modal-footer button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #9b6f6f;
+  color: white;
+  margin-left: 10px;
+}
+
+.modal-footer button:hover {
+  background-color: #a90505;;
+}
+
+/* انیمیشن‌های ورود و خروج */
+.modal-fade-enter-active,
+.modal-fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.modal-fade-enter-from,
+.modal-fade-leave-to {
+  opacity: 0;
+}
