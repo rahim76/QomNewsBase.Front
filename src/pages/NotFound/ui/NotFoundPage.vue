@@ -26,12 +26,7 @@
 </template>
 
 <script>
-export default {
-  name: 'NotFound',
-  mounted() {
-    document.title = 'صفحه یافت نشد - 404';
-  }
-}
+
 </script>
 
 <style scoped src="../styles/notFoundPage.css"></style>
