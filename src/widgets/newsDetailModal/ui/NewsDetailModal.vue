@@ -16,12 +16,12 @@
 <script setup>
 
 import BaseModal from '@/shared/ui/BaseModal/BaseModal.vue'
-import NewsDetail from '@/entities/news/ui/NewsDetail.vue'
-import { useNewsStore } from '@/entities/news/model/newsStore'
-import { useShowNews } from '@/features/news/showNews/model/useShowNews'
+import NewsDetail from '@/features/news/widgets/NewsDetail/NewsDetail.vue'
+import { useNewsStore } from '@/features/news/store/newsStore'
+import { useShowNews } from '@/features/news/composables/useShowNews'
 import { storeToRefs } from 'pinia'
 import CloseButton from '@/shared/ui/ModalFooter/CloseButton.vue'
-import CommentsBox from '@/entities/comment/ui/CommentsBox.vue'
+import CommentsBox from '@/features/comment/widgets/CommentsBox/CommentsBox.vue'
 
 const newsStore = useNewsStore()
 

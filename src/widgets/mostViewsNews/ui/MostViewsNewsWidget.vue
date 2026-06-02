@@ -38,14 +38,12 @@
 
 <script setup>
 
-import { useNewsStore } from '@/entities/news/model/newsStore.js';
-import Loading from '@/shared/ui/Loading.vue';
-import '../styles/mostViews.css'
-import { useMostViewsNews } from '@/entities/news/model/useMostViewsNews.js';
+import { useNewsStore } from '@/features/news/store/newsStore.js';
+import { useMostViewsNews } from '@/features/news/composables/useMostViewsNews.js';
 import { storeToRefs } from 'pinia';
 import NewsDetailModal from '@/widgets/newsDetailModal/ui/NewsDetailModal.vue';
-import NewsCard from '@/entities/news/ui/NewsCard.vue';
-import NewsCardSkeleton from '@/entities/news/ui/NewsCardSkeleton.vue';
+import NewsCard from '@/features/news/widgets/NewsCard/NewsCard.vue';
+import NewsCardSkeleton from '@/features/news/widgets/NewsCard/NewsCardSkeleton.vue';
 
 const newsStore = useNewsStore();
 
@@ -59,3 +57,5 @@ const {
 } = useMostViewsNews(selectedGroupId)
 
 </script>
+
+<style scoped src="../styles/mostViews.css"></style>

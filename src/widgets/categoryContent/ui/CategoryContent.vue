@@ -38,8 +38,8 @@
 
 import CategorySidebarSkeleton from './CategoryContentSkeleton.vue'
 import '../styles/categoryContent.css'
-import { useNewsFilter } from '@/features/news/newsFilter/model/useNewsFilter';
-import { useGetNewsGroups } from '@/entities/newsGroup/model/useGetNewsGroups';
+import { useNewsFilter } from '@/features/news/composables/useNewsFilter.js';
+import { useGetNewsGroups } from '@/features/newsGroup/composables/useGetNewsGroups.js';
 
 const { selectGroup } = useNewsFilter()
 

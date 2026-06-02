@@ -46,11 +46,11 @@
 
 import { storeToRefs } from 'pinia'
 const Loading = () => import('@/shared/ui/Loading.vue')
-import { useGetNews } from '@/entities/news/model/useGetNews'
-import { useNewsStore } from '@/entities/news/model/newsStore'
+import { useGetNews } from '@/features/news/composables/useGetNews'
+import { useNewsStore } from '@/features/news/store/newsStore'
 import NewsDetailModal from '@/widgets/newsDetailModal/ui/NewsDetailModal.vue'
-import NewsCard from '@/entities/news/ui/NewsCard.vue'
-import NewsCardSkeleton from '@/entities/news/ui/NewsCardSkeleton.vue'
+import NewsCard from '@/features/news/widgets/NewsCard/NewsCard.vue'
+import NewsCardSkeleton from '@/features/news/widgets/NewsCard/NewsCardSkeleton.vue'
 
 const newsStore = useNewsStore()
 

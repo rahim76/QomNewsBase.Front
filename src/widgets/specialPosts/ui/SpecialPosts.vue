@@ -66,12 +66,12 @@
 
 <script setup>
 
-import { useCommentStore } from '@/entities/comment/model/commentStore';
-import { useGetLastComments } from '@/entities/comment/model/useGetLastComments';
+import { useCommentStore } from '@/features/comment/store/commentStore.js';
+import { useGetLastComments } from '@/features/comment/composables/useGetLastComments.js';
 import { storeToRefs } from 'pinia';
 // import Loading from '@/shared/ui/Loading.vue';
 import LatestCommentsSkeleton from './SpecialPostsSkeleton.vue'
-import { useNewsStore } from '@/entities/news/model/newsStore';
+import { useNewsStore } from '@/features/news/store/newsStore.js';
 
 const commentStore = useCommentStore()
 const newsStore = useNewsStore()
