@@ -42,9 +42,9 @@
 
 <script setup>
 
-import { useNewsFilter } from '@/features/news/newsFilter/model/useNewsFilter';
-import { useGetNewsGroups } from '@/entities/newsGroup/model/useGetNewsGroups.js';
-import { useNewsStore } from '@/entities/news/model/newsStore';
+import { useNewsFilter } from '@/features/news/composables/useNewsFilter';
+import { useGetNewsGroups } from '@/features/newsGroup/composables/useGetNewsGroups.js';
+import { useNewsStore } from '@/features/news/store/newsStore';
 import { storeToRefs } from 'pinia';
 import '../styles/headerGroupList.css'
 const { selectGroup } = useNewsFilter()

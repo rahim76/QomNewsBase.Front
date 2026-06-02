@@ -8,19 +8,19 @@ const routes = [
     children: [
       {
         path: '',
-        component: () => import('@/pages/News/ui/NewsPage.vue'),
+        component: () => import('@/features/news/pages/NewsPage.vue'),
       },
       {
         path: 'about',
-        component: () => import('@/pages/about/ui/AboutPage.vue'),
+        component: () => import('@/pages/about/AboutPage.vue'),
       },
       {
         path: 'contact',
-        component: () => import('@/pages/contact/ui/ContactPage.vue'),
+        component: () => import('@/pages/contactUs/ContactUsPage.vue'),
       },
       {
         path: '/:pathMatch(.*)*',
-        component: () => import('@/pages/NotFound/ui/NotFoundPage.vue'),
+        component: () => import('@/pages/NotFound/NotFoundPage.vue'),
       },
     ],
   },
