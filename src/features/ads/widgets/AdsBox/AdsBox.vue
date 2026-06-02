@@ -1,18 +1,18 @@
 <template>
-  <div class="ads-box">
+  <div v-if="!!ads" class="ads-box">
     <span class="title">تبلیغات</span><br />
 
     <swiper
       :slides-per-view="1"
       :space-between="20"
-      :loop="true"
+      :loop="ads.length  > 3"
       :autoplay="{ delay: 3000 }"
-      class="ads-swiper"
-    >
-      <swiper-slide v-for="(ad, index) in 3" :key="index">
+      class="ads-swiper">
+
+      <swiper-slide v-for="ad in ads" :key="ad.id">
         <figure>
           <span class="ad-badge">تبلیغات</span>
-          <img src="../../../shared//images/unnamed.jpg" alt="" />
+          <img :src="ad.thumbnail" alt="" />
         </figure>
       </swiper-slide>
 
@@ -22,6 +22,11 @@
       <div class="swiper-pagination"></div>
     </swiper>
   </div>
+
+  <div v-else>
+    <span>تبلیغی برای نمایش وجود ندارد.</span>
+  </div>
+
 </template>
 
 <script setup>
@@ -32,14 +37,14 @@ import 'swiper/css/pagination';
 
 import SwiperCore from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { useSidebarRightAds } from '../../composables/useSidebarRightAds';
 
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
-const ads = [
-  { img: '../../../shared//images/unnamed.jpg' },
-  { img: '../../../shared//images/unnamed.jpg' },
-  { img: '../../../shared//images/unnamed.jpg' },
-];
+const { data: ads, isLoading, isError, error } = useSidebarRightAds()
+
+
+
 </script>
 
-<style scoped src="../styles/adsBox.css"></style>
+<style scoped src="../../ui/styles/adsBox.css"></style>
