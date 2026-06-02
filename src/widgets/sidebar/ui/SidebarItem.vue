@@ -9,6 +9,6 @@
 </template>
 
 <script setup>
-import AdsBox from '@/widgets/adsBox/ui/AdsBox.vue';
+import AdsBox from '@/features/ads/widgets/AdsBox/AdsBox.vue';
 import SpecialPosts from '@/widgets/specialPosts/ui/SpecialPosts.vue';
 </script>
