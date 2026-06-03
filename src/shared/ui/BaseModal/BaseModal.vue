@@ -1,4 +1,6 @@
 <template>
+<teleport to="body">
+
   <transition name="modal-fade">
     <div class="modal-overlay" v-if="show" @click.self="$emit('close')">
       <div class="modal-content">
@@ -6,10 +8,13 @@
       </div>
     </div>
   </transition>
+
+</teleport>
 </template>
 
 <script setup>
 
+import { Teleport } from 'vue';
 import './baseModal.css'
 
 defineProps({

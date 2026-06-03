@@ -6,9 +6,21 @@ const routes = [
     path: '/',
     component: DefaultLayout,
     children: [
+      // {
+      //   path: 'admin',
+      //   component: () => import('@/pages/admin/AdminPage.vue'),
+      //   meta: {
+      //     requiresAuth: true,
+      //   },
+      // },
       {
         path: '',
         component: () => import('@/features/news/pages/NewsPage.vue'),
+      },
+      {
+        path: '/news/:id',
+        name: 'news-detail',
+        component: () => import('@/features/news/pages/NewsDetailPage.vue'),
       },
       {
         path: 'about',
@@ -29,6 +41,17 @@ const routes = [
 export const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+router.beforeEach((to, from, next) => {
+  const isAuthenticated = true
+
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next('/login')
+    return
+  }
+
+  next()
 })
 
 export default router
