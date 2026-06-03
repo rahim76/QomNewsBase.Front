@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useGetAds } from '../queries/useGetAdsQuery'
+import { useGetAds } from './useGetAdsQuery'
 
 export const useSidebarRightAds = () => {
   const query = useGetAds()

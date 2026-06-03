@@ -1,8 +1,8 @@
 <template>
-  <div v-if="!!ads" class="ads-box">
+  <div class="ads-box">
     <span class="title">تبلیغات</span><br />
 
-    <swiper
+    <swiper v-if="ads.length > 0"
       :slides-per-view="1"
       :space-between="20"
       :loop="ads.length  > 3"
@@ -25,10 +25,11 @@
       <div class="swiper-button-prev"></div>
       <div class="swiper-pagination"></div>
     </swiper>
-  </div>
 
-  <div v-else>
+    <div v-else>
     <span>تبلیغی برای نمایش وجود ندارد.</span>
+  </div>
+  
   </div>
 
 </template>
