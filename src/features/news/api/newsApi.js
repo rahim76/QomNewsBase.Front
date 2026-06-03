@@ -1,7 +1,9 @@
 import axios from '@/app/axios'
 
-export const fetchNews = async (newsGroupId) => {
-  const res = await axios.get(`/News?newsGroupId=${newsGroupId}`)
+export const fetchNews = async (newsGroupId, pageNumber = 1, pageSize = 1000) => {
+  const res = await axios.get(
+    `/News?newsGroupId=${newsGroupId}&pageNumber=${pageNumber}&pageSize=${pageSize}`,
+  )
   return res.data
 }
 

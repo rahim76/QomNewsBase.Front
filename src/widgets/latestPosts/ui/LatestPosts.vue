@@ -22,8 +22,8 @@
         </div>
       </div>
 
-      <div v-else-if="newsList" class="row g-4">
-        <div v-for="news in newsList" :key="news.id" class="col-md-3 mb-4" style="cursor: pointer;" >
+      <div v-else-if="!!newsList.data" class="row g-4">
+        <div v-for="news in newsList.data" :key="news.id" class="col-md-3 mb-4" style="cursor: pointer;" >
             <NewsCard :news="news" @open="id => newsStore.showNews(id)"/>
         </div>
 
@@ -61,6 +61,6 @@ const {
   isLoading,
   isError,
   error
-} = useGetNews(selectedGroupId)
+} = useGetNews(selectedGroupId,1,5)
 
 </script>
