@@ -19,7 +19,7 @@ app.use(VueLazyload, {
   attempt: 1,
 })
 
-// vue query
+// vue query.
 const queryClient = new QueryClient()
 app.use(VueQueryPlugin, {
   queryClient,
