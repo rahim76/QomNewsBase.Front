@@ -43,15 +43,15 @@ export const router = createRouter({
   routes,
 })
 
-router.beforeEach((to, from, next) => {
-  const isAuthenticated = true
+// router.beforeEach((to, from, next) => {
+//   const isAuthenticated = true
 
-  if (to.meta.requiresAuth && !isAuthenticated) {
-    next('/login')
-    return
-  }
+//   if (to.meta.requiresAuth && !isAuthenticated) {
+//     next('/login')
+//     return
+//   }
 
-  next()
-})
+//   next()
+// })
 
 export default router
