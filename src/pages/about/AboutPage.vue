@@ -69,4 +69,4 @@
 
 </script>
 
-<style scoped src="../style/aboutPage.css"></style>
+<style scoped src="./aboutPage.css"></style>

@@ -1,14 +1,13 @@
 <template>
 
  <div class="r-sidebar">
-    <AdsBox/>
+    <SidebarRightAds/>
     <SpecialPosts/>
-
 </div>
 
 </template>
 
 <script setup>
-import AdsBox from '@/features/ads/widgets/AdsBox/AdsBox.vue';
-import SpecialPosts from '@/widgets/specialPosts/ui/SpecialPosts.vue';
+import SidebarRightAds from '@/features/ads/widgets/SidebarRightAds/SidebarRightAds.vue'
+import SpecialPosts from '@/widgets/specialPosts/ui/SpecialPosts.vue'
 </script>
