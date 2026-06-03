@@ -4,9 +4,8 @@
     <div class="news-card__image">
 
       <img
-        :src="news.thumbnail || defaultImage"
-        :alt="news.title"
-      />
+        v-lazy="news.thumbnail"
+        :alt="news.title"/>
 
       <span class="news-card__category">
         {{ news.newsGroupTitle || 'بدون دسته‌بندی' }}
@@ -44,8 +43,6 @@
 </template>
 
 <script setup>
-import defaultImage from '@/shared/images/1733753707Capture.png'
-import '../../ui/styles/newsCard.css'
 
 defineProps({
   news: {
@@ -56,3 +53,5 @@ defineProps({
 
 const emit = defineEmits(['open'])
 </script>
+
+<style scoped src="../../ui/styles/newsCard.css"></style>
