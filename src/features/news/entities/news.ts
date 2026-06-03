@@ -2,13 +2,9 @@ export interface News {
   id: string
   title: string
   description: string
-  thumbnail: string
+  thumbnail?: string
   viewsCount: number
   newsGroupId: number
-  newsGroupTitle: string
-  commentsCount: number
-  createdAt: string
-  createdAtLocal: string
-  updatedAt: string
-  updatedAtLocal: string
+  createdAt: Date
+  updatedAt: Date
 }
