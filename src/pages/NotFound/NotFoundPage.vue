@@ -29,4 +29,4 @@
 
 </script>
 
-<style scoped src="../styles/notFoundPage.css"></style>
+<style scoped src="./notFoundPage.css"></style>
