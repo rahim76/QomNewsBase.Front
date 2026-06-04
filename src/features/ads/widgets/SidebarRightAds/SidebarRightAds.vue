@@ -14,7 +14,7 @@
 
           <figure>
           <span class="ad-badge">تبلیغات</span>
-          <img :src="ad.thumbnail" alt="" />
+          <img v-lazy="ad.thumbnail" :alt="ad.title"/>
         </figure>
 
         </a>
