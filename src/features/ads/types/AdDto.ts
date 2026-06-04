@@ -1,4 +1,3 @@
-import { BaseDto } from '@/shared/types/BaseDto'
 import { AdPositionTypeEnum } from './AdPositionTypeEnum'
 
 export interface AdDto {
@@ -20,5 +19,4 @@ export interface AdDto {
   createdAtLocal: string
   updatedAt: Date
   updatedAtLocal: string
-  baseDto: BaseDto
 }
