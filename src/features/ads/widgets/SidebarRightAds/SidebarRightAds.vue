@@ -43,12 +43,11 @@ import 'swiper/css/pagination';
 import SwiperCore from 'swiper';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { useSidebarRightAds } from '../../composables/useSidebarRightAds';
+import { AdPositionTypeEnum } from '../../types/AdPositionTypeEnum';
 
 SwiperCore.use([Autoplay, Navigation, Pagination]);
 
-const { data: ads, isLoading, isError, error } = useSidebarRightAds()
-
-
+const { data: ads, isLoading, isError, error } = useSidebarRightAds(AdPositionTypeEnum.SidebarRight)
 
 </script>
 

@@ -1,7 +1,7 @@
 import axios from '@/app/axios'
-import { AdDto } from '../types/AdDto'
+import { AdResponseDto } from '../types/AdResponseDto'
 
-export const getAds = async (): Promise<Array<AdDto>> => {
-  const { data } = await axios.get<Array<AdDto>>('/Ad')
+export const getAds = async (): Promise<AdResponseDto> => {
+  const { data } = await axios.get<AdResponseDto>('/Ad')
   return data
 }
