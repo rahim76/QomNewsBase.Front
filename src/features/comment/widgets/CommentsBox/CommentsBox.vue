@@ -60,7 +60,7 @@
 import { useNewsStore } from '@/features/news/store/newsStore';
 import { storeToRefs } from 'pinia';
 import { useDeleteComment } from '@/features/comment/composables/useDeleteComment';
-import { useShowNews } from '@/features/news/composables/useShowNews.js';
+import { useShowNewsQuery } from '@/features/news/composables/useShowNewsQuery.js';
 import AddCommentForm from '@/features/comment/widgets/AddCommentForm/AddCommentForm.vue';
 import UpdateComment from '@/features/comment/widgets/UpdateComment/UpdateComment.vue';
 import { ref } from 'vue';
@@ -69,7 +69,7 @@ const newsStore = useNewsStore();
 
 const { selectedNewsId } = storeToRefs(newsStore);
 
-const { data: getSelectedNewsComments } = useShowNews(selectedNewsId)
+const { data: getSelectedNewsComments } = useShowNewsQuery(selectedNewsId)
 
 
 //#region delete comment
