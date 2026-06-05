@@ -39,7 +39,7 @@
 <script setup>
 
 import { useNewsStore } from '@/features/news/store/newsStore.js';
-import { useMostViewsNews } from '@/features/news/composables/useMostViewsNews.js';
+import { useMostViewsNewsQuery } from '@/features/news/composables/useMostViewsNewsQuery.js';
 import { storeToRefs } from 'pinia';
 import NewsDetailModal from '@/widgets/newsDetailModal/ui/NewsDetailModal.vue';
 import NewsCard from '@/features/news/widgets/NewsCard/NewsCard.vue';
@@ -54,7 +54,7 @@ const {
   isLoading: isLoadingMostViewedNews,
   isError: isErrorMostViewedNews,
   error: mostViewedNewsError,
-} = useMostViewsNews(selectedGroupId)
+} = useMostViewsNewsQuery(selectedGroupId)
 
 </script>
 

@@ -46,7 +46,7 @@
 
 import { storeToRefs } from 'pinia'
 const Loading = () => import('@/shared/ui/Loading.vue')
-import { useGetNews } from '@/features/news/composables/useGetNews'
+import { useGetNewsQuery } from '@/features/news/composables/useGetNewsQuery'
 import { useNewsStore } from '@/features/news/store/newsStore'
 import NewsDetailModal from '@/widgets/newsDetailModal/ui/NewsDetailModal.vue'
 import NewsCard from '@/features/news/widgets/NewsCard/NewsCard.vue'
@@ -61,6 +61,6 @@ const {
   isLoading,
   isError,
   error
-} = useGetNews(selectedGroupId,1,5)
+} = useGetNewsQuery(selectedGroupId,1,5)
 
 </script>

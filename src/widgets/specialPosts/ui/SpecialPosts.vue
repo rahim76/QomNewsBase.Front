@@ -67,7 +67,7 @@
 <script setup>
 
 import { useCommentStore } from '@/features/comment/store/commentStore.js';
-import { useGetLastComments } from '@/features/comment/composables/useGetLastComments.js';
+import { useGetLastCommentsQuery } from '@/features/comment/composables/useGetLastCommentsQuery.js';
 import { storeToRefs } from 'pinia';
 // import Loading from '@/shared/ui/Loading.vue';
 import LatestCommentsSkeleton from './SpecialPostsSkeleton.vue'
@@ -82,7 +82,7 @@ const {
   isLoading,
   isError,
   error,
-} = useGetLastComments(takeCommensCount);
+} = useGetLastCommentsQuery(takeCommensCount);
 
 </script>
 <style scoped src="../styles/specialPosts.css"></style>

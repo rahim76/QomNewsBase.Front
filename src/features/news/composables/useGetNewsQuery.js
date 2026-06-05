@@ -2,7 +2,7 @@ import { fetchNews } from '@/features/news/api/newsApi'
 import { GET_NEWS_KEY } from '@/features/news/model/keys'
 import { useQuery } from '@tanstack/vue-query'
 
-export const useGetNews = (selectedGroupId, pageNumber, pageSize) => {
+export const useGetNewsQuery = (selectedGroupId, pageNumber, pageSize) => {
   return useQuery({
     queryKey: [GET_NEWS_KEY, selectedGroupId, pageNumber],
     queryFn: async () => {

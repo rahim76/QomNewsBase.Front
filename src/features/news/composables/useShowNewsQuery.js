@@ -2,7 +2,7 @@ import { getNewsDetail } from '@/features/news/api/newsApi'
 import { useQuery } from '@tanstack/vue-query'
 import { NEWS_DETAIL_KEY } from '@/features/news/model/keys'
 
-export const useShowNews = (selectedNewsId) => {
+export const useShowNewsQuery = (selectedNewsId) => {
   return useQuery({
     queryKey: [NEWS_DETAIL_KEY, selectedNewsId.value],
     queryFn: async () => {
